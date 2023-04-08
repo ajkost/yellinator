@@ -1,6 +1,6 @@
 # Yellinator
 
-Yellinator is a web application that allows you to create custom "old man yells at..." images by uploading your own image or searching for one.
+Yellinator is a lightweight, client-side web application that allows you to create custom "old man yells at..." images by uploading your own image or searching for one. All image processing and manipulation happens directly in your browser, eliminating the need for a backend server. This ensures a faster and more secure user experience while reducing the load on server resources.
 
 ![Example Image](/images/old-man-yells-at-question-mark.png)
 
