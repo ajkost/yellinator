@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yellinator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+   
+    <h1>Welcome to <strong>Yellinator!</strong></h1>
+    <h4>Yellinator is a user-friendly tool that allows you to create custom "old man yells at..." images by uploading your own image or searching for one.</h3>
+    <img src="images/old-man-yells-at-question-mark.png" alt="old man yells at question mark"> 
+    <div class="tabs">
+        <button class="tab-button active" data-target="upload-tab">Upload image</button>
+        <button class="tab-button" data-target="search-tab">Search image (experimental)</button>
+        <button class="tab-button" data-target="about-tab">About</button>
+    </div>
+    <div class="tab-container">       
+        <div class="tab-content active" id="upload-tab">
+            <input type="file" id="upload-image" accept="image/*">
+        </div>
+        <div class="tab-content" id="search-tab">
+            <form id="search-form" autocomplete="on">
+                <div class="input-row">
+                    <label for="cx">CX (<a href="https://programmablesearchengine.google.com/controlpanel/all" target="_blank" rel="noopener">Search Engine ID</a>):</label>
+                    <input type="text" autocomplete="username" id="cx" name="cx" placeholder="a8de5b981d3ef6654" required>
+                </div>
+                <div class="input-row">
+                    <label for="apiKey"><a href="https://developers.google.com/custom-search/v1/introduction#identify_your_application_to_google_with_api_key" target="_blank" rel="noopener">API key</a>:</label>
+                    <input type="password" autocomplete="current-password" id="apiKey" name="apiKey" placeholder="BHdaTyBA..." required>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="thumbnail" name="image-size" value="thumbnail" checked>
+                    <label for="thumbnail">Thumbnails</label>
+                    <input type="radio" id="full" name="image-size" value="full">
+                    <label for="full">Full size (CORS everywhere extension required)</label>
+                </div>
+                <div class="input-row">
+                    <label for="num-results">Number of Results (1-20):</label>
+                    <input type="number" id="num-results" name="num-results" min="1" max="20" value="4" required>
+                </div>
+                <input type="text" id="search-text" name="search-text" placeholder="Search for images" required>
+                <button id="search-button" type="button">Search</button>
+            </form>   
+        </div>
+        <div class="tab-content" id="about-tab">
+            <h4>Key features of Yellinator include:</h4>
+            <ul>
+              <li>Compresses output images to below 125KB, optimizing them for fast loading and sharing.</li>
+              <li>Automatically resizes images based on their orientation (landscape or portrait) for optimal visual results.</li>
+              <li>Click-to-save: Generates output file names that are ready to be uploaded as custom emojis on Slack.</li>
+              <li>Built with <img src="images/kiwi-heart.png" alt="kiwi-heart" height="15" width="15"></li>
+            </ul>
+        </div>
+    </div>
+    <h2>Results</h2>
+    <div class="divider"></div>
+    <div id="results"></div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
