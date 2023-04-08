@@ -1,256 +1,292 @@
 /* General styles */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+body
+{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
 }
 
-h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+h1
+{
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 input[type="file"],
 input[type="text"],
-button {
-    font-size: 1rem;
-    padding: 8px 16px;
-    margin: 0 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease;
+button
+{
+  font-size: 1rem;
+  padding: 8px 16px;
+  margin: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
 }
 
 input[type="file"]:hover,
 input[type="text"]:hover,
-button:hover {
-    border-color: #999;
+button:hover
+{
+  border-color: #999;
 }
 
 input[type="file"]:focus,
-input[type="text"]:focus {
-    outline: none;
-    border-color: #777;
+input[type="text"]:focus
+{
+  outline: none;
+  border-color: #777;
 }
 
-button {
-    background-color: #0095ff;
-    color: #fff;
-    cursor: pointer;
+button
+{
+  background-color: #0095ff;
+  color: #fff;
+  cursor: pointer;
 }
 
-button:hover {
-    background-color: #007ace;
+button:hover
+{
+  background-color: #007ace;
 }
 
 /* Image results styles */
-#results {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    max-width: 960px;
-    margin-top: 20px;
+#results
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 960px;
+  margin-top: 20px;
 }
 
-.result-image-container {
-    margin: 10px;
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease;
+.result-image-container
+{
+  margin: 10px;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
 }
 
-.result-image-container:hover {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transform: translateY(-3px);
+.result-image-container:hover
+{
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
 }
 
-.result-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    border-radius: 8px;
+.result-image
+{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 /* Tab styles */
-.tabs {
-    display: flex;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #ccc;
-    border-radius: 4px 4px 0 0;
-    overflow: hidden;
+.tabs
+{
+  display: flex;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ccc;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
 }
 
-.tab-button {
-    padding: 8px 16px;
-    background-color: #f0f0f0;
-    color: #333;
-    cursor: pointer;
-    border: none;
-    border-right: 1px solid #ccc;
-    transition: all 0.2s ease;
+.tab-button
+{
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  border-right: 1px solid #ccc;
+  transition: all 0.2s ease;
 }
 
-.tab-button:last-child {
-    border-right: none;
+.tab-button:last-child
+{
+  border-right: none;
 }
 
-.tab-button:hover {
-    background-color: #e0e0e0;
+.tab-button:hover
+{
+  background-color: #e0e0e0;
 }
 
-.tab-button.active {
-    background-color: #fff;
-    color: #0095ff;
-    font-weight: bold;
+.tab-button.active
+{
+  background-color: #fff;
+  color: #0095ff;
+  font-weight: bold;
 }
 
-
-
-.tab-content.active {
-    display: flex;
-    opacity: 1;
-    pointer-events: auto;
+.tab-content.active
+{
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-input:invalid {
-    border-color: red !important;
-    outline-color: red !important;
-}
-  
-  .tab-contents-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 300px;
+@keyframes fadeIn
+{
+  from
+  {
+    opacity: 0;
   }
 
-  .tab-content {
-    width: 100%;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
+  to
+  {
+    opacity: 1;
+  }
 }
 
-
-
-h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+input:invalid
+{
+  border-color: red !important;
+  outline-color: red !important;
 }
 
-.divider {
-    width: 90%;
-    height: 1px;
-    background-color: #ccc;
-    margin: 10px 0;
+.tab-contents-container
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 300px;
 }
 
-.tab-container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100px; 
+.tab-content
+{
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
-#search-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
+h2
+{
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
-#search-form label {
-    display: inline-block;
-    margin-right: 5px;
+.divider
+{
+  width: 90%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 10px 0;
+}
+
+.tab-container
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100px;
+}
+
+#search-form
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+#search-form label
+{
+  display: inline-block;
+  margin-right: 5px;
 }
 
 #search-form input[type="login"],
-#search-form input[type="password"],
-#search-form input[type="number"],
-#search-form input[type="text"] {
-    display: inline-block;
-    width: 100%;
-    max-width: 300px;
-    padding: 5px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    #search-form input[type="password"],
+    #search-form input[type="number"],
+    #search-form input[type="text"]
+{
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
-#search-form .radio-group {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+#search-form .radio-group
+{
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
-#search-form input[type="button"] {
-    width: auto;
-    margin-top: 10px;
+#search-form input[type="button"]
+{
+  width: auto;
+  margin-top: 10px;
 }
 
-#search-form .input-row {
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 300px;
-    gap: 1px;
-    margin-bottom: 1px;
+#search-form .input-row
+{
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  gap: 1px;
+  margin-bottom: 1px;
+}
+    
+    /* Style for the search button */
+#search-button
+{
+  background-color: #0095ff;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-/* Style for the search button */
-#search-button {
-    background-color: #0095ff;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
+#search-button:hover
+{
+  background-color: #007ace;
 }
 
-#search-button:hover {
-    background-color: #007ace;
+#search-button:disabled
+{
+  background-color: #ccc;
+  color: #999;
+  cursor: not-allowed;
+  pointer-events: none;
 }
-
-#search-button:disabled {
-    background-color: #ccc;
-    color: #999;
-    cursor: not-allowed;
-    pointer-events: none;
-  }
 
 #search-form .input-row input[type="login"],
-#search-form .input-row input[type="password"],
-#search-form .input-row input[type="number"] {
-    width: 60%;
+    #search-form .input-row input[type="password"],
+    #search-form .input-row input[type="number"]
+{
+  width: 60%;
 }

@@ -36,8 +36,6 @@ uploadInput.addEventListener('change', async () => {
     uploadInput.value = ''; // Reset the input to allow selecting the same file again.
 });
 
-const searchForm = document.getElementById('search-form');
-
 async function searchImages(query, apiKey, cx, num, imageSize) {
   const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}&searchType=image&num=${num}`;
   const corsProxy = 'https://corsproxy.io/?';
@@ -79,8 +77,6 @@ async function searchImages(query, apiKey, cx, num, imageSize) {
       throw new Error('Invalid request. Please check your API key and CX.');
     } else if (error.message.includes('CORS')) {
       throw new Error('The server does not allow cross-origin requests. Please try again later.');
-    } else if (error.message.includes('items is undefined')) {
-      throw new Error('No images were found for your search query.');
     } else {
       console.error('Error fetching images:', error);
       throw new Error('An unknown error occurred. Please try again later.');
