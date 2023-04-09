@@ -92,6 +92,7 @@ async function searchImages(query, apiKey, cx, num, imageSize) {
   
     const img = new Image();
     img.classList.add('result-image');
+    img.classList.add('checkered-background');
     img.src = image.src;
     img.addEventListener('click', () => {
       processSelectedImage(image, name);
